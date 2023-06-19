@@ -12,7 +12,6 @@ function dragStart() {
   setTimeout(() => {
     this.style.display = "none";
   }, 0);
-  console.log("dragStart");
 }
 
 function dragEnd() {
@@ -20,8 +19,7 @@ function dragEnd() {
   setTimeout(() => {
     this.style.display = "block";
   }, 0);
-  console.log("dragEnd");
-}
+  }
 
 all_status.forEach((status) => {
   status.addEventListener("dragover", dragOver);
@@ -32,23 +30,23 @@ all_status.forEach((status) => {
 
 function dragOver(e) {
   e.preventDefault();
-  //   console.log("dragOver");
+  
 }
 
 function dragEnter() {
   this.style.border = "1px dashed #ccc";
-  console.log("dragEnter");
+
 }
 
 function dragLeave() {
   this.style.border = "none";
-  console.log("dragLeave");
+
 }
 
 function dragDrop() {
   this.style.border = "none";
   this.appendChild(draggableTodo);
-  console.log("dropped");
+
 }
 
 /* modal */
